@@ -1,14 +1,12 @@
 import './App.css';
 import { useState } from 'react';
 
-function Sqaure({value})
+function Sqaure()
 {
-  const [squares, setSquares] = useState(1);
+  const [value, setSquares] = useState(null);
 
   function Clickedbutton(){
-  
-    alert("clicked this line "+ squares + "times");
-    setSquares(squares + 1);
+    setSquares('X');
   
 }
   return(
@@ -24,13 +22,13 @@ export default function Board() {
   return (
   <>
   <div className='board-row1'>
-    <Sqaure value="1"/>
+    <Sqaure />
   </div>
   <div className='board-row2'>
-    <Sqaure value="2"/>
+    <Sqaure />
   </div>
   <div className='board-row3'>
-    <Sqaure value="3"/>
+    <Sqaure />
   </div>
   </>);
 }
