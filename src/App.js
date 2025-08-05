@@ -1,23 +1,36 @@
 import './App.css';
+import { useState } from 'react';
 
-export default function Sqaure() {
+function Sqaure({value})
+{
+  const [squares, setSquares] = useState(1);
+
+  function Clickedbutton(){
+  
+    alert("clicked this line "+ squares + "times");
+    setSquares(squares + 1);
+  
+}
+  return(
+    <>
+    <button className='square' onClick={Clickedbutton} value="1">{value}</button>
+    <button className='square' onClick={Clickedbutton} value="2">{value}</button>
+    <button className='square' onClick={Clickedbutton} value="3">{value}</button>
+    </>
+  );
+}
+export default function Board() {
 
   return (
   <>
   <div className='board-row1'>
-    <button className='square'>1</button>
-    <button className='square'>2</button>
-    <button className='square'>3</button>
+    <Sqaure />
   </div>
   <div className='board-row2'>
-    <button className='square'>4</button>
-    <button className='square'>5</button>
-    <button className='square'>6</button>
+    <Sqaure/>
   </div>
   <div className='board-row3'>
-    <button className='square'>7</button>
-    <button className='square'>8</button>
-    <button className='square'>9</button>
+    <Sqaure/>
   </div>
   </>);
 }
