@@ -13,9 +13,9 @@ function Sqaure({value})
 }
   return(
     <>
-    <button className='square' onClick={Clickedbutton} value="1">{value}</button>
-    <button className='square' onClick={Clickedbutton} value="2">{value}</button>
-    <button className='square' onClick={Clickedbutton} value="3">{value}</button>
+    <button className='square' onClick={Clickedbutton} >{value}</button>
+    <button className='square' onClick={Clickedbutton} >{value}</button>
+    <button className='square' onClick={Clickedbutton} >{value}</button>
     </>
   );
 }
@@ -24,13 +24,13 @@ export default function Board() {
   return (
   <>
   <div className='board-row1'>
-    <Sqaure />
+    <Sqaure value="1"/>
   </div>
   <div className='board-row2'>
-    <Sqaure/>
+    <Sqaure value="2"/>
   </div>
   <div className='board-row3'>
-    <Sqaure/>
+    <Sqaure value="3"/>
   </div>
   </>);
 }
